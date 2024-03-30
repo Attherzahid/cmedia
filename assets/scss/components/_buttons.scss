@@ -1,0 +1,39 @@
+.btn {
+  display: flex;
+  font-size: 15px;
+  padding: 12px 23px;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 7px;
+  transition: .3s ;
+}
+.btn-primary {
+  padding: 18px 42px 18px 26px;
+  color: white;
+  background-color: var(--primary);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 26px;
+    border-left: 7px solid white;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+  }
+}
+.btn-ouline {
+  color: var(--primary);
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  &:hover {
+    border-color: var(--primary);
+    background-color: var(--primary);
+  }
+}
