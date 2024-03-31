@@ -8,14 +8,49 @@
 
 @font-face {
   font-family: "AvenirLTStd-Medium";
-  src: url(./../../fonts/avenir/AvenirLTStd-Medium.otf) format("truetype");
-  font-weight: 400;
+  src: url(./../../fonts/avenir/AvenirLTStd-Medium.ttf) format("truetype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
-  
+}
+@font-face {
+  font-family: "AvenirLTStd-Heavy";
+  src: url(./../../fonts/avenir/AvenirLTStd-Heavy.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirLTStd-Black";
+  src: url(./../../fonts/avenir/AvenirLTStd-Black.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url(./../../fonts/poppins/Poppins-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 // classes
 .font-Stretch-Pro {
   font-family: "Stretch Pro", sans-serif;
+}
+
+
+.font-AvenirLTStd-Black {
+  font-family: "AvenirLTStd-Black", sans-serif;
+}
+.font-AvenirLTStd-Heavy {
+  font-family: "AvenirLTStd-Heavy", sans-serif;
+}
+.font-AvenirLTStd-Black {
+  font-family: "AvenirLTStd-Black", sans-serif;
+}
+
+.font-Poppins {
+  font-family: "Poppins", sans-serif;
 }

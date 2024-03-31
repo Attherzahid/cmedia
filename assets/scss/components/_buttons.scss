@@ -1,39 +1,79 @@
 .btn {
   display: flex;
   font-size: 15px;
+  font-weight: 700;
   padding: 12px 23px;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  border-radius: 7px;
-  transition: .3s ;
+  border-radius: 10px;
+  transition: .3s;
 }
+
 .btn-primary {
   padding: 18px 42px 18px 26px;
   color: white;
   background-color: var(--primary);
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    right: 26px;
-    border-left: 7px solid white;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
+}
+
+.btn-light {
+  padding: 8px 20px;
+  box-shadow: 0px 8px 32px rgba(#000, .6);
+  background: rgb(171, 242, 186);
+  background: -moz-linear-gradient(0deg, rgba(171, 242, 186, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(171, 242, 186, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(0deg, rgba(171, 242, 186, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#abf2ba", endColorstr="#ffffff", GradientType=1);
+  border-color: var(--white);
+  border: none;
+  &:hover {
+    box-shadow: unset;
+    border-color: var(--white);
+    .icon-wrapper {
+      .icon-obj {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .icon-wrapper {
+    position: relative;
+
+    .icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .icon-obj {
+      transform: rotate(45deg);
+      transition: .3s;
+    }
   }
 }
-.btn-ouline {
+
+.btn-outline {
   color: var(--primary);
   background-color: transparent;
   border: 1px solid var(--primary);
+
+  img {
+    transition: .3s;
+  }
+
   &:hover {
     border-color: var(--primary);
     background-color: var(--primary);
+
+    img {
+      filter: invert(1) brightness(0);
+    }
   }
 }
