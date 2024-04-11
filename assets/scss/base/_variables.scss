@@ -1,12 +1,9 @@
 :root {
   --primary: #40E062;
   --primary-light: #DCE9DF; 
-  --black: #000;
+  --gray-light: #DCE9DF;
+  --black: #111111;
   --white: #fff;
-  --font-family: "AvenirLTStd-Medium", sans-serif;
+  --font-family: "AvenirLTStd", sans-serif;
   --section-padding: clamp(45px, 7vw, 100px) 0;
-
-
-  --gray: #6c757d;
-  --gray-dark: #474747;
 }

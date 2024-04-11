@@ -22,11 +22,8 @@
           padding: 29.25px 28px 26.25px;
           position: relative;
           overflow: hidden;
-
-          &:hover,
           &.active {
             opacity: 1;
-
             &::before {
               content: "";
               position: absolute;
@@ -56,6 +53,9 @@
               transform: translate(-50%, 0);
               transition: .3s;
             }
+          }
+          &:hover {
+            color: var(--primary);
           }
         }
       }

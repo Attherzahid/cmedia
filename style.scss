@@ -3,7 +3,7 @@
 
 
 body {
-  font-family: "AvenirLTStd-Medium", sans-serif;
+  font-family: var(--font-family);
   background-color: var(--black);
 }
 
@@ -14,7 +14,8 @@ body {
 .lead {
   font-size: 16px;
   line-height: 26px;
-  color: var(--primary-light);
+  color: var(--gray-light);
+
 }
 
 .text-gradient {
@@ -25,6 +26,9 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#acaead", endColorstr="#ffffff", GradientType=1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gray-light {
+  color: var(--gray-light);
 }
 
 .sec-badge {
@@ -49,4 +53,8 @@ body {
     border-radius: 30px;
     z-index: -1;
   }
+}
+.g-20 {
+  --bs-gutter-y: 20px;
+  --bs-gutter-x: 20px;
 }
