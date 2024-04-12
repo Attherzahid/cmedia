@@ -1,28 +1,28 @@
 @font-face {
-  font-family: "Stretch Pro";
-  src: url(./../../fonts/stretch/StretchPro.ttf) format("truetype");
+  font-family: "StretchPro";
+  src: url('./../fonts/stretch/StretchProRegular.ttf') format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "AvenirLTStd Medium";
-  src: url('./../../fonts/avenir/AvenirLTStd-Medium.ttf') format("truetype");
+  font-family: "AvenirLTStd";
+  src: url('./../fonts/avenir/AvenirLTStd-Medium.ttf') format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "AvenirLTStd Heavy";
-  src: url('./../../fonts/avenir/AvenirLTStd-Heavy.ttf') format("truetype");
+  font-family: "AvenirLTStd";
+  src: url('./../fonts/avenir/AvenirLTStd-Heavy.ttf') format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "AvenirLTStd Black";
-  src: url('./../../fonts/avenir/AvenirLTStd-Black.ttf') format("truetype");
+  font-family: "AvenirLTStd";
+  src: url('./../fonts/avenir/AvenirLTStd-Black.ttf') format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -30,30 +30,31 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url('./../../fonts/poppins/Poppins-SemiBold.ttf') format("truetype");
+  src: url('./../fonts/poppins/Poppins-SemiBold.ttf') format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 // classes
 .font-Stretch-Pro {
-  font-family: "Stretch Pro", sans-serif;
+  font-family: "StretchPro", sans-serif;
 }
 
 
 .font-AvenirLTStd-Medium {
-  font-family: "AvenirLTStd Medium", sans-serif;
+  font-family: "AvenirLTStd", sans-serif;
   font-weight: 500;
 }
 .font-AvenirLTStd-Heavy {
-  font-family: "AvenirLTStd Heavy", sans-serif;
+  font-family: "AvenirLTStd", sans-serif;
   font-weight: 700;
 }
 .font-AvenirLTStd-Black {
-  font-family: "AvenirLTStd Black", sans-serif;
+  font-family: "AvenirLTStd", sans-serif;
   font-weight: 900;
 }
 
 .font-Poppins {
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }

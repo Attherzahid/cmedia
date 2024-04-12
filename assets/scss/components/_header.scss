@@ -5,6 +5,9 @@
   background: -webkit-linear-gradient(0deg, rgba(3, 140, 62, 0.13) 0%, rgba(3, 140, 62, 0) 50%);
   background: linear-gradient(0deg, rgba(3, 140, 62, 0.13) 0%, rgba(3, 140, 62, 0) 50%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#038c3e", endColorstr="#038c3e", GradientType=1);
+  &.active {
+    backdrop-filter: blur(16px);
+  }
 
   .navbar {
     padding: 0;
