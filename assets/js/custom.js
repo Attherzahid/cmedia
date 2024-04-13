@@ -13,7 +13,7 @@ jQuery(document).ready(function () {
         jQuery('.card-s1').each(function () {
             var card = jQuery(this)[0];
             var cardHeight = jQuery(this).outerHeight();
-            new ScrollMagic.Scene({ triggerElement: card, duration: cardHeight })
+            new ScrollMagic.Scene({ triggerElement: card, duration: cardHeight, triggerHook: 0.3 })
                 .setClassToggle(card, "active")
                 // .addIndicators() 
                 .addTo(controller);

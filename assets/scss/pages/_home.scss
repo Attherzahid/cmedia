@@ -1,52 +1,52 @@
 @keyframes rotateGradientObj {
     from {
-        transform: rotate(0deg);
+        transform: translate(-50%, -40%) rotate(0deg);
     }
 
     to {
-        transform: rotate(-360deg);
+        transform: translate(-50%, -40%) rotate(-360deg);
     }
 }
+
 @keyframes rotateGradientObjInverse {
     from {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 
     to {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
 @keyframes rotateGradientObjServices {
     from {
-        transform: translate(-50%, -50%) rotate(0deg) ;
+        transform: translate(-50%, -40%) rotate(0deg);
     }
 
     to {
-        transform: translate(-50%, -50%) rotate(-360deg) ;
+        transform: translate(-50%, -40%) rotate(-360deg);
     }
 }
+
 @keyframes rotateGradientObjServicesInverse {
     from {
-        transform: translate(-50%, -50%) rotate(0deg) ;
+        transform: translate(-50%, -60%) rotate(0deg);
     }
 
     to {
-        transform: translate(-50%, -50%) rotate(360deg) ;
+        transform: translate(-50%, -60%) rotate(360deg);
     }
 }
 
 .card-s1 {
-    background: rgb(61, 61, 61);
-    background: -moz-linear-gradient(325deg, rgba(61, 61, 61, 0) 0%, rgba(0, 0, 0, 0.6026785714285714) 100%);
-    background: -webkit-linear-gradient(325deg, rgba(61, 61, 61, 0) 0%, rgba(0, 0, 0, 0.6026785714285714) 100%);
-    background: linear-gradient(325deg, rgba(61, 61, 61, 0) 0%, rgba(0, 0, 0, 0.6026785714285714) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d3d3d", endColorstr="#000000", GradientType=1);
+    background: linear-gradient(325deg, rgba(61,61,61,0.10968137254901966) 0%, rgba(31,35,30,0.6) 100%);
     border-radius: 20px;
     padding: 1px;
     border: none;
     overflow: hidden;
     position: relative;
     z-index: 1;
+
     &::before,
     &::after {
         content: "";
@@ -58,17 +58,19 @@
         background: -webkit-radial-gradient(circle, rgba(64, 224, 98, 1) 0%, rgba(32, 104, 26, 1) 100%);
         background: radial-gradient(circle, rgba(64, 224, 98, 1) 0%, rgba(32, 104, 26, 1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#40e062", endColorstr="#20681a", GradientType=1);
-        filter: blur(50px);
+        filter: blur(46px);
         z-index: -1;
         opacity: .18;
         transition: opacity .4s;
     }
+
     &.active,
     &:hover {
         .custom-border {
             background: linear-gradient(0deg, rgba(32, 104, 26, 0) 0%, rgba(64, 224, 98, 0.56) 100%) border-box;
         }
     }
+
     .animation-wrapper {
         .icon {
             position: absolute;
@@ -76,6 +78,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
         .particles {
             position: absolute;
             width: 100%;
@@ -84,6 +87,7 @@
             opacity: .4;
         }
     }
+
     .custom-border {
         position: absolute;
         top: 0;
@@ -271,15 +275,18 @@
         }
 
         .card {
+            &::before,
+            &::after {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
             &::before {
-                top: -8px;
-                left: 48px;
                 animation: 10s rotateGradientObj linear alternate-reverse infinite;
             }
 
             &::after {
-                top: 65px;
-                left: 119px;
                 animation: 10s rotateGradientObjInverse linear alternate-reverse infinite;
             }
 
@@ -334,10 +341,10 @@
                 padding: 24px 30px 28px;
             }
 
-   
+
         }
     }
-    
+
 }
 
 .brands-sec {
@@ -406,6 +413,7 @@
             background: -webkit-linear-gradient(300deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.30) 100%);
             background: linear-gradient(300deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.30) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+
             &::before {
                 content: "";
                 position: absolute;
@@ -429,6 +437,7 @@
 .default-sec {
     position: relative;
     padding: var(--section-padding);
+
     &.with-strokes-bg {
         .strokes-bg {
             position: absolute;
@@ -439,13 +448,16 @@
         }
     }
 }
+
 .services-sec {
     padding: clamp(45px, 7vw, 100px) 0 60px;
     position: relative;
     background-image: url('./../../../assets/img/body-background.webp');
     background-size: cover;
     background-position: center;
+
     .card {
+
         &::before,
         &::after {
             width: 50%;
@@ -454,9 +466,11 @@
             top: 50%;
             left: 50%;
         }
+
         &::before {
             animation: 16s rotateGradientObjServices linear alternate-reverse infinite;
         }
+
         &::after {
             animation: 16s rotateGradientObjServicesInverse linear alternate-reverse infinite;
         }
@@ -497,36 +511,43 @@
                     object-position: center;
                     transform: translate(-50%, -50%);
                 }
+
                 .text-card {
                     width: 100%;
                     padding: 22px;
                     border-radius: 16px;
-                    background: linear-gradient(90deg, rgba(30,145,88,1) 0%, rgba(45,148,73,1) 50%, rgba(30,145,88,1) 100%);
+                    background: linear-gradient(90deg, rgba(30, 145, 88, 1) 0%, rgba(45, 148, 73, 1) 50%, rgba(30, 145, 88, 1) 100%);
                     width: 28%;
                     max-width: 372px;
                     position: absolute;
+
                     &:nth-child(1) {
                         top: 12%;
                         left: 24%;
                     }
+
                     &:nth-child(2) {
                         top: 16%;
                         right: 16%;
                     }
+
                     &:nth-child(3) {
                         bottom: 24%;
                         left: 14%;
                     }
+
                     &:nth-child(4) {
                         bottom: 20%;
                         right: 20%;
                     }
+
                     .text-div {
                         min-height: 16px;
                         border-radius: 20px;
                         position: relative;
                         background-color: rgba(#BAB3FF, .06);
                         overflow: hidden;
+
                         &::before {
                             content: "";
                             position: absolute;
@@ -542,6 +563,7 @@
                             mask-composite: exclude;
                             z-index: 0;
                         }
+
                         &::after {
                             content: "";
                             position: absolute;
@@ -555,20 +577,24 @@
                             mask-composite: exclude;
                             z-index: 0;
                             animation: shimmerEffect 3s linear infinite;
+
                             @keyframes shimmerEffect {
                                 from {
                                     left: -100%;
                                 }
+
                                 to {
                                     left: 100%;
                                 }
                             }
                         }
+
                         &:nth-child(2) {
                             &::after {
                                 animation-delay: .3s;
                             }
                         }
+
                         &:nth-child(3) {
                             &::after {
                                 animation-delay: .6s;
@@ -577,6 +603,7 @@
                     }
                 }
             }
+
             .overlay-card {
                 width: 100%;
                 height: 100%;
@@ -591,6 +618,48 @@
         }
     }
 }
+
+.kols-sec {
+    .card {
+
+        &::before,
+        &::after {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::before {
+            animation: 16s rotateGradientObj linear alternate-reverse infinite;
+        }
+
+        &::after {
+            animation: 16s rotateGradientObjInverse linear alternate-reverse infinite;
+        }
+        &.active,
+        &:hover {
+
+            &::before,
+            &::after {
+                opacity: .6;
+            }
+            .avatar {
+                transform: scale(1.1);
+            }
+        }
+        .avatar {
+            transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-title {
+            font-size: 25px;
+        }
+
+        .card-body {
+            padding: 31px 24px;
+        }
+    }
+}
+
 @media (max-width: 1440px) {}
 
 @media (max-width: 991px) {
@@ -598,28 +667,34 @@
         .card {
             &.influencer-marketing-card {
                 .animation-wrapper {
-                    min-height: 330px;
+                    min-height: 310px;
+
                     .text-card {
                         padding: 18px;
                         width: 40%;
+
                         &:nth-child(1) {
                             top: 8%;
                             left: 8%;
                         }
+
                         &:nth-child(2) {
                             top: 12%;
                             right: 8%;
                         }
+
                         &:nth-child(3) {
-                            bottom: 12%;
+                            bottom: 10%;
                             left: 4%;
                         }
+
                         &:nth-child(4) {
-                            bottom: 10%;
+                            bottom: 8%;
                             right: 10%;
                         }
                     }
                 }
+
                 .card-body {
                     padding: 24px 24px 40px;
                 }
