@@ -16,9 +16,17 @@
 
 .btn-primary {
   padding: 18px 42px 18px 26px;
-  color: white;
+  color: var(--black);
   background-color: var(--primary);
   position: relative;
+  border-color: var(--primary);
+
+  &:hover {
+    opacity: .8;
+    background-color: var(--primary);
+    border-color: var(--primary);
+
+  }
 }
 
 .btn-light {
@@ -28,9 +36,11 @@
   background: linear-gradient(0deg, rgba(171, 242, 186, 1) 0%, rgba(255, 255, 255, 1) 100%);
   border-color: var(--white);
   border: none;
+
   &:hover {
     box-shadow: unset;
     border-color: var(--white);
+
     .icon-wrapper {
       .icon-obj {
         transform: rotate(0deg);
@@ -54,12 +64,14 @@
       transition: .3s;
     }
   }
+
   &.btn-bg-primary {
     background: linear-gradient(-45deg, #65FF85 0%, #40E062 100%);
+
     &:hover {
       filter: brightness(.8);
     }
-  } 
+  }
 }
 
 .btn-outline {

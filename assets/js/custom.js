@@ -32,8 +32,9 @@ jQuery(document).ready(function () {
 
 
     jQuery('.particle-container').each(function () {
-        var containerId = jQuery(this).attr('id');
-        particlesJS(containerId, {
+        var containerId = jQuery(this).attr('id'); 
+
+        var particlesConfig = {
             "particles": {
                 "number": {
                     "value": 26,
@@ -142,7 +143,15 @@ jQuery(document).ready(function () {
                 }
             },
             "retina_detect": true
-        });
+        };
+
+        // Customization based on ID
+        if (containerId === "particles-5") {
+            particlesConfig.particles.number.value = 60;  // Increase particles for container with id "5"
+        }
+
+        // Initialize Particles.js with customized settings
+        particlesJS(containerId, particlesConfig);
     });
 
 
