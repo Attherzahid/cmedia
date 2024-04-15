@@ -13,7 +13,7 @@ jQuery(document).ready(function () {
         jQuery('.card-s1').each(function () {
             var card = jQuery(this)[0];
             var cardHeight = jQuery(this).outerHeight();
-            new ScrollMagic.Scene({ triggerElement: card, duration: cardHeight, triggerHook: 0.3 })
+            new ScrollMagic.Scene({ triggerElement: card, duration: cardHeight, triggerHook: 0.25 })
                 .setClassToggle(card, "active")
                 // .addIndicators() 
                 .addTo(controller);
@@ -32,12 +32,12 @@ jQuery(document).ready(function () {
 
 
     jQuery('.particle-container').each(function () {
-        var containerId = jQuery(this).attr('id'); 
+        var containerId = jQuery(this).attr('id');
 
         var particlesConfig = {
             "particles": {
                 "number": {
-                    "value": 26,
+                    "value": 40,
                     "density": {
                         "enable": false,
                         "value_area": 600
@@ -146,6 +146,9 @@ jQuery(document).ready(function () {
         };
 
         // Customization based on ID
+        if (containerId === "particles-4") {
+            particlesConfig.particles.number.value = 60;  // Increase particles for container with id "5"
+        }
         if (containerId === "particles-5") {
             particlesConfig.particles.number.value = 60;  // Increase particles for container with id "5"
         }
@@ -154,6 +157,33 @@ jQuery(document).ready(function () {
         particlesJS(containerId, particlesConfig);
     });
 
+    jQuery('.social-ads-slider').slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true,
+        centerPadding: 0,
+        autoplay: true,
+        speed: 500
+    });
 
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Select all child divs
+        const childDivs = jQuery('.social-media-manage-card .social-boxes > div');
+    
+        // Remove the toggle class from all divs
+        childDivs.removeClass('active');
+    
+        // Add toggle class to the current div
+        jQuery(childDivs[currentIndex]).addClass('active');
+    
+        // Update currentIndex for the next iteration
+        currentIndex = (currentIndex + 1) % childDivs.length;
+    }, 2000);
 
 });
