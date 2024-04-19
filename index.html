@@ -19,12 +19,12 @@
         <div class="container">
             <a class="navbar-brand" href="/"><img src="./assets/img/logo.webp" alt="logo-img" class="img-fluid"></a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse pb-3 pb-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -39,9 +39,29 @@
                         <a class="nav-link" href="./success-stories.html">Success Stories</a>
                     </li>
                 </ul>
-            </div>
-            <a href="" class="btn btn-outline d-none d-lg-flex"><img src="./assets/img/icons/phone-primary.svg"
+                <div class="switch my-3 d-lg-none">
+                    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" checked>
+                    <label for="language-toggle">
+                        <span class="off">ES</span>
+                        <span class="on">ENG</span>
+                    </label>
+                    <div class="custom-border"></div>
+                </div>
+                <a href="" class="btn btn-outline justify-content-center d-lg-none"><img src="./assets/img/icons/phone-primary.svg"
                     alt="phone-icon">Contact</a>
+            </div>
+            <div class="d-none d-lg-flex gap-3 align-items-center">
+                <div class="switch d-none d-xl-flex">
+                    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" checked>
+                    <label for="language-toggle">
+                        <span class="off">ES</span>
+                        <span class="on">ENG</span>
+                    </label>
+                    <div class="custom-border"></div>
+                </div>
+                <a href="" class="btn btn-outline"><img src="./assets/img/icons/phone-primary.svg"
+                        alt="phone-icon">Contact</a>
+            </div>
         </div>
     </nav>
 </header>
@@ -49,29 +69,31 @@
     <section class="hero-sec">
         <div class="hero-wrapper position-relative">
             <div class="container">
-                <h1 class="hero-title font-Stretch-Pro text-center text-uppercase">
-                    <span class="text-gradient">We don't expect results,</span>
-                    <br>
-                    <span class="text-gradient">we </span>
-                    <span class="text-primary">deliver</span>
-                    <span class="text-gradient"> them</span>
-                </h1>
-                <p class="lead text-center mx-auto mb-3 mb-lg-4" style="max-width: 820px;">
-                    We increase the visibility and recognition of your project. Thanks to our extensive experience,
-                    we specialize in the Web3
-                    sector and entrepreneurship. We design and execute the best digital marketing strategies,
-                    offering a
-                    360º solution as a guarantee of digital success in a changing and highly competitive online
-                    market.
-                </p>
-                <div class="d-flex justify-content-center w-100">
-                    <a href="#" class="btn btn-light">
-                        <div class="icon-wrapper">
-                            <img src="./assets/img/btn-phone-icon.webp" alt="" class="icon">
-                            <img src="./assets/img/btn-icon-obj.webp" alt="" class="icon-obj">
-                        </div>
-                        Contact Us
-                    </a>
+                <div class="position-relative z-1">
+                    <h1 class="hero-title font-Stretch-Pro text-center text-uppercase">
+                        <span class="text-gradient">We don't expect results,</span>
+                        <br>
+                        <span class="text-gradient">we </span>
+                        <span class="text-primary">deliver</span>
+                        <span class="text-gradient"> them</span>
+                    </h1>
+                    <p class="lead text-center mx-auto mb-3 mb-lg-4" style="max-width: 820px;">
+                        We increase the visibility and recognition of your project. Thanks to our extensive experience,
+                        we specialize in the Web3
+                        sector and entrepreneurship. We design and execute the best digital marketing strategies,
+                        offering a
+                        360º solution as a guarantee of digital success in a changing and highly competitive online
+                        market.
+                    </p>
+                    <div class="d-flex justify-content-center w-100">
+                        <a href="#" class="btn btn-light">
+                            <div class="icon-wrapper">
+                                <img src="./assets/img/btn-phone-icon.webp" alt="" class="icon">
+                                <img src="./assets/img/btn-icon-obj.webp" alt="" class="icon-obj">
+                            </div>
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
             </div>
             <img src="./assets/img/hero-obj-1.webp" alt="" id="hero-obj-1" width="317" height="317">
@@ -342,7 +364,7 @@
             </div>
         </div>
     </section>
-    <section class="default-sec with-strokes-bg services-sec" style="padding: clamp(45px, 7vw, 100px) 0 60px;">
+    <section class="default-sec with-strokes-bg services-sec sec-obj" style="padding: clamp(45px, 7vw, 100px) 0 60px;">
         <div class="container">
             <div class="d-flex justify-content-center mb-3">
                 <span class="d-block sec-badge">Our Services</span>
@@ -401,6 +423,8 @@
                 </div>
             </div>
         </div>
+        <div class="obj obj-1"></div>
+        <div class="obj obj-2"></div>
         <img src="/assets/img/advantage-strokes-bg.webp" alt="" class="strokes-bg">
     </section>
     <section class="default-sec with-strokes-bg kols-sec">
@@ -651,8 +675,10 @@
     </section>
     <section class="cta-sec">
         <div class="container">
-            <div class="d-flex flex-column flex-lg-row gap-3 align-items-center justify-content-center justify-content-lg-between mb-3">
-                <h2 class="main-title font-Stretch-Pro text-gradient text-uppercase position-relative z-1">get in touch</h2>
+            <div
+                class="d-flex flex-column flex-lg-row gap-3 align-items-center justify-content-center justify-content-lg-between mb-3">
+                <h2 class="main-title font-Stretch-Pro text-gradient text-uppercase position-relative z-1">get in touch
+                </h2>
                 <a href="#" class="btn btn-light text-nowrap ">
                     <div class="icon-wrapper">
                         <img src="./assets/img/btn-phone-icon.webp" alt="" class="icon">
@@ -663,7 +689,8 @@
             </div>
         </div>
         <div class="custom-marquee">
-            <span class="d-block main-title font-Stretch-Pro position-relative z-1 text-uppercase">reach out to us to see all of our profiles reach out to us to see all of our profiles</span>
+            <span class="d-block main-title font-Stretch-Pro position-relative z-1 text-uppercase">reach out to us to
+                see all of our profiles reach out to us to see all of our profiles</span>
         </div>
     </section>
     <section class="default-sec services-sec" style="background: unset;">
@@ -717,8 +744,11 @@
                             <div class="back-face">
                                 <img src="./assets/img/service-influencer-marketing-ico.webp" alt="icon" class="mb-4"
                                     width="85" height="76">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Social Ads</span>
-                                <p class="card-text text-gray-light">Maximize your visibility in a precise and targeted way. We design creative and cost-effective campaigns that connect your brand with your target audience, achieving tangible results.</p>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Social
+                                    Ads</span>
+                                <p class="card-text text-gray-light">Maximize your visibility in a precise and targeted
+                                    way. We design creative and cost-effective campaigns that connect your brand with
+                                    your target audience, achieving tangible results.</p>
                             </div>
                             <div class="custom-border rotated-border"></div>
                         </div>
@@ -729,23 +759,30 @@
                         <div class="card card-s1 social-media-manage-card service-normal-card h-100 z-1">
                             <div class="animation-wrapper position-relative">
                                 <div class="social-boxes d-flex flex-column align-items-center">
-                                    <div class="icon-box"><img src="./assets/img/social-media-manage-instagram-ico.webp" alt="icon"></div>
-                                    <div class="icon-box"><img src="./assets/img/social-media-manage-facebook-ico.webp" alt="icon"></div>
-                                    <div class="icon-box"><img src="./assets/img/social-media-manage-linkedin-ico.webp" alt="icon"></div>
+                                    <div class="icon-box"><img src="./assets/img/social-media-manage-instagram-ico.webp"
+                                            alt="icon"></div>
+                                    <div class="icon-box"><img src="./assets/img/social-media-manage-facebook-ico.webp"
+                                            alt="icon"></div>
+                                    <div class="icon-box"><img src="./assets/img/social-media-manage-linkedin-ico.webp"
+                                            alt="icon"></div>
                                 </div>
                                 <div id="particles-8" class="particles particle-container"></div>
                                 <img src="./assets/img/services-card-verticle-storkes.webp" alt="icon"
                                     class="vertical-strokes-bg">
                             </div>
                             <div class="card-body">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Social Media Management</span>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Social
+                                    Media Management</span>
                                 <p class="card-text text-gray-light">Gain Visibility and Recognition Online</p>
                             </div>
                             <div class="back-face">
                                 <img src="./assets/img/service-influencer-marketing-ico.webp" alt="icon" class="mb-4"
                                     width="85" height="76">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Social Media Management</span>
-                                <p class="card-text text-gray-light">We focus on building and maintaining a coherent and attractive brand image, achieving interactions and growth by managing your presence in the digital environment.</p>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Social
+                                    Media Management</span>
+                                <p class="card-text text-gray-light">We focus on building and maintaining a coherent and
+                                    attractive brand image, achieving interactions and growth by managing your presence
+                                    in the digital environment.</p>
                             </div>
                             <div class="custom-border rotated-border"></div>
                         </div>
@@ -761,14 +798,18 @@
                                     class="vertical-strokes-bg">
                             </div>
                             <div class="card-body">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Press Media</span>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Press
+                                    Media</span>
                                 <p class="card-text text-gray-light">The Credibility Every Brand Needs</p>
                             </div>
                             <div class="back-face">
                                 <img src="./assets/img/service-influencer-marketing-ico.webp" alt="icon" class="mb-4"
                                     width="85" height="76">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Press Media</span>
-                                <p class="card-text text-gray-light">Deliver your product message through strategically selected media channels. We specialize in creating compelling and engaging stories that capture attention and build credibility.</p>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Press
+                                    Media</span>
+                                <p class="card-text text-gray-light">Deliver your product message through strategically
+                                    selected media channels. We specialize in creating compelling and engaging stories
+                                    that capture attention and build credibility.</p>
                             </div>
                             <div class="custom-border rotated-border"></div>
                         </div>
@@ -780,31 +821,41 @@
                             <div class="animation-wrapper position-relative">
                                 <div class="circle cirlce-level-1">
                                     <div class="position-relative w-100 h-100">
-                                        <img src="./assets/img/service-community-person-1.webp" alt="person-img" width="54" height="54" class="person person-1">
-                                        <img src="./assets/img/service-community-person-2.webp" alt="person-img" width="54" height="54" class="person person-2">
-                                        <img src="./assets/img/service-community-person-3.webp" alt="person-img" width="54" height="54" class="person person-3">
+                                        <img src="./assets/img/service-community-person-1.webp" alt="person-img"
+                                            width="54" height="54" class="person person-1">
+                                        <img src="./assets/img/service-community-person-2.webp" alt="person-img"
+                                            width="54" height="54" class="person person-2">
+                                        <img src="./assets/img/service-community-person-3.webp" alt="person-img"
+                                            width="54" height="54" class="person person-3">
                                     </div>
                                 </div>
                                 <div class="circle cirlce-level-2">
                                     <div class="position-relative w-100 h-100">
-                                        <img src="./assets/img/service-community-person-4.webp" alt="person-img" width="54" height="54" class="person person-4">
-                                        <img src="./assets/img/service-community-person-5.webp" alt="person-img" width="54" height="54" class="person person-5">
+                                        <img src="./assets/img/service-community-person-4.webp" alt="person-img"
+                                            width="54" height="54" class="person person-4">
+                                        <img src="./assets/img/service-community-person-5.webp" alt="person-img"
+                                            width="54" height="54" class="person person-5">
                                     </div>
                                 </div>
-                                <img src="./assets/img/service-community-management-obj.webp" alt="" class="obj" width="130" height="130">
+                                <img src="./assets/img/service-community-management-obj.webp" alt="" class="obj"
+                                    width="130" height="130">
                                 <div id="particles-10" class="particles particle-container"></div>
                                 <img src="./assets/img/services-card-verticle-storkes.webp" alt="icon"
                                     class="vertical-strokes-bg">
                             </div>
                             <div class="card-body">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Press Media</span>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Press
+                                    Media</span>
                                 <p class="card-text text-gray-light">The Credibility Every Brand Needs</p>
                             </div>
                             <div class="back-face">
                                 <img src="./assets/img/service-influencer-marketing-ico.webp" alt="icon" class="mb-4"
                                     width="85" height="76">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Press Media</span>
-                                <p class="card-text text-gray-light">Deliver your product message through strategically selected media channels. We specialize in creating compelling and engaging stories that capture attention and build credibility.</p>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Press
+                                    Media</span>
+                                <p class="card-text text-gray-light">Deliver your product message through strategically
+                                    selected media channels. We specialize in creating compelling and engaging stories
+                                    that capture attention and build credibility.</p>
                             </div>
                             <div class="custom-border rotated-border"></div>
                         </div>
@@ -815,22 +866,28 @@
                         <div class="card card-s1 content-marketing-card service-normal-card h-100 z-1">
                             <div class="animation-wrapper position-relative">
                                 <div class="btn-wrapper">
-                                    <img src="./assets/img/service-content-marketing-btn.webp" alt="animaiton-stuff" class="btn-img">
+                                    <img src="./assets/img/service-content-marketing-btn.webp" alt="animaiton-stuff"
+                                        class="btn-img">
                                 </div>
-                                <img src="./assets/img/service-content-marketing-cursor.webp" alt="icon" class="mouse-cursor" width="29" height="44">
+                                <img src="./assets/img/service-content-marketing-cursor.webp" alt="icon"
+                                    class="mouse-cursor" width="29" height="44">
                                 <div id="particles-11" class="particles particle-container"></div>
                                 <img src="./assets/img/services-card-verticle-storkes.webp" alt="icon"
                                     class="vertical-strokes-bg">
                             </div>
                             <div class="card-body">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Content Marketing</span>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Content
+                                    Marketing</span>
                                 <p class="card-text text-gray-light">Creativity and quality for a better conversion</p>
                             </div>
                             <div class="back-face">
                                 <img src="./assets/img/service-influencer-marketing-ico.webp" alt="icon" class="mb-4"
                                     width="85" height="76">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Content Marketing</span>
-                                <p class="card-text text-gray-light">Our creative team focuses on quality and a creative and captivating touch to make your community feel identified with the content we design for your brand.</p>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Content
+                                    Marketing</span>
+                                <p class="card-text text-gray-light">Our creative team focuses on quality and a creative
+                                    and captivating touch to make your community feel identified with the content we
+                                    design for your brand.</p>
                             </div>
                             <div class="custom-border rotated-border"></div>
                         </div>
@@ -840,20 +897,25 @@
                     <div class="service-card-wrapper">
                         <div class="card card-s1 event-manage-card service-normal-card h-100 z-1">
                             <div class="animation-wrapper position-relative">
-                                <img src="./assets/img/service-event-management-obj.webp" alt="" class="obj" width="445" height="309">
+                                <img src="./assets/img/service-event-management-obj.webp" alt="" class="obj" width="445"
+                                    height="309">
                                 <div id="particles-12" class="particles particle-container"></div>
                                 <img src="./assets/img/services-card-verticle-storkes.webp" alt="icon"
                                     class="vertical-strokes-bg">
                             </div>
                             <div class="card-body">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Event Management</span>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Event
+                                    Management</span>
                                 <p class="card-text text-gray-light">Planning and connecting through experiences</p>
                             </div>
                             <div class="back-face">
                                 <img src="./assets/img/service-influencer-marketing-ico.webp" alt="icon" class="mb-4"
                                     width="85" height="76">
-                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Event Management</span>
-                                <p class="card-text text-gray-light">Events that not only create interaction, but also unforgettable experiences. Every event is an opportunity to amplify and build loyalty in your community.</p>
+                                <span class="card-title font-Poppins fw-semibold text-gradient mb-2 d-block">Event
+                                    Management</span>
+                                <p class="card-text text-gray-light">Events that not only create interaction, but also
+                                    unforgettable experiences. Every event is an opportunity to amplify and build
+                                    loyalty in your community.</p>
                             </div>
                             <div class="custom-border rotated-border"></div>
                         </div>
