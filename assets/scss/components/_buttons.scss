@@ -2,7 +2,7 @@
   display: flex;
   font-size: 15px;
   font-weight: 700;
-  padding: 12px 23px;
+  padding: 9px 23px;
   align-items: center;
   gap: 6px;
   text-align: center;
@@ -12,6 +12,7 @@
   user-select: none;
   border-radius: 10px;
   transition: .3s;
+  max-height: 55px;
 }
 
 .btn-primary {

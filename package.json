@@ -6,9 +6,13 @@
     "components": "sass --watch assets/scss/components/_all_components.scss assets/css/all_components.css --style compressed",
     "base": "sass --watch assets/scss/base/_base.scss assets/css/base.css --style compressed",
     "home": "sass --watch assets/scss/pages/_home.scss assets/css/home.css --style compressed",
+    "about": "sass --watch assets/scss/pages/_about.scss assets/css/about.css --style compressed",
+    "services": "sass --watch assets/scss/pages/_services.scss assets/css/services.css --style compressed",
+    "success": "sass --watch assets/scss/pages/_success-stories.scss assets/css/success-stories.css --style compressed",
+    "contact": "sass --watch assets/scss/pages/_contact-us.scss assets/css/contact-us.css --style compressed",
     "font": "sass --watch assets/scss/base/_fonts.scss assets/css/fonts.css --style compressed",
     "compile-main-sass": "sass --watch style.scss style.css --style compressed",
-    "compile-sass": "concurrently  \"npm run compile-main-sass\" \"npm run components\" \"npm run base\" \"npm run font\" \"npm run home\" "
+    "compile-sass": "concurrently  \"npm run compile-main-sass\" \"npm run components\" \"npm run base\" \"npm run font\" \"npm run home\" \"npm run about\" \"npm run services\" \"npm run success\" \"npm run contact\""
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
